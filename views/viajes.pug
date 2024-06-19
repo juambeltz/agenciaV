@@ -1,0 +1,36 @@
+extends ./layout/index
+
+block contenidoJJ
+    h1.mt-5.text-center #{pagina}
+    main.container.mt-5
+        include ./layout/bloque_viajes
+
+        //- .row.proximos-viajes
+        //-     each rv in resultadoViajes
+        //-         .col-md-6.col-lg-4.mb-4
+        //-             .card 
+        //-                 img.card-img-top(src=`img/destinos_${rv.imagen}.jpg`)
+        //-                 .card-body
+        //-                     h2= rv.titulo
+
+        //-                     p 
+        //-                         svg.icon.icon-tabler.icon-tabler-calendar-check(xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#fd0061' fill='none' stroke-linecap='round' stroke-linejoin='round')
+        //-                             path(stroke='none' d='M0 0h24v24H0z' fill='none')
+        //-                             path(d='M11.5 21h-5.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v6')
+        //-                             path(d='M16 3v4')
+        //-                             path(d='M8 3v4')
+        //-                             path(d='M4 11h16')
+        //-                             path(d='M15 19l2 2l4 -4')
+        //-                         span #{rv.fecha_ida} - #{rv.fecha_vuelta}
+                            
+        //-                     p
+        //-                         | #{rv.disponibles} Disponibles
+
+        //-                     p= rv.descripcion.substr(0, 100) + '...'
+
+        //-                     a(href=`viajes/${rv.slug}` , class="btn btn-success btn-block") Sabe más de #{rv.titulo}
+                                    
+                        
+            
+        //- p= JSON.stringify(resultadoViajes)
+        

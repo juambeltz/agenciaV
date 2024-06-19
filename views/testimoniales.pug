@@ -1,0 +1,48 @@
+extends ./layout/index
+
+block contenidoJJ
+    main.container.mt-5
+        h1.text-center.mt-5 #{pagina}
+
+        //- p= JSON.stringify(ttmls)
+        include ./layout/bloque_testimoniales
+        //- blockquote.text-center
+        //- .row.testimoniales
+        //-     each t in ttmls
+        //-         .col-md-6.col-lg-4.mb-4 
+        //-             .card
+        //-                 .card-body
+        //-                     blockquote.blockquote
+        //-                     p.mb-0
+        //-                         | #{t.mensaje}
+        //-                     footer.blockquote-footer
+        //-                         | #{t.nombre}
+
+        h2.d-block.w-100.col.text-center Agregar testimonial 
+
+        //- p= JSON.stringify(errores)
+        if( errores )
+            //-si existen errores
+            each e in errores 
+                .alert.col.alert-danger.text-center= e.mensaje
+
+        
+
+        .row.justify-content-center.col
+            .col-md-8
+                form(action="" method="POST") 
+                    .form-group
+                        label(for="nombre") nombre
+                        input#nombre(type="text", placeholder="Tu nombre", name="nombre", class="form-control", value= nombre )
+                    .form-group
+                        label(for="correo") correo electrónico
+                        input#correo(type="email", placeholder="Tu correo", name="correo", class="form-control", value= correo)
+                    .form-group
+                        label(for="mensaje") mensaje
+                        textarea#mensaje(placeholder="Tu mensaje", name="mensaje", class="form-control", rows = 3)= mensaje
+                        //-el text area no requiere de value
+
+                    input.btn.btn-success.btn-block(type="submit") 
+                            
+                         
+            
