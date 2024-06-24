@@ -16,7 +16,7 @@ db.authenticate()
     .catch( error => console.log(error))
 
 //Definir puerto
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 // el process.env.PORT se usa solo en el diploy NO en fase de desarrollo que va al 4007
 
 // Definir la carpeta publica con las hojas de estilo e imagenes
